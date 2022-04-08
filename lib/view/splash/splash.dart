@@ -10,6 +10,8 @@ class Splash extends ConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
+    SplashRiverpood watch = ref.watch(splashRiverpood);
+
     return Scaffold(
       appBar: AppBar(),
       body: Column(
@@ -17,9 +19,9 @@ class Splash extends ConsumerWidget {
           SizedBox(
             height: MediaQuery.of(context).size.height / 2,
             child: PageView.builder(
-              onPageChanged: (value){
-
-                
+              onPageChanged: (value) {
+                watch.current = value;
+                watch.current == 3 ? watch.ucuncuSayfa() : null;
               },
               itemCount: ref.watch(splashRiverpood).pages.length,
               controller: ref.watch(splashRiverpood).controller,
@@ -34,11 +36,15 @@ class Splash extends ConsumerWidget {
               },
             ),
           ),
-          CustomButton(
-              title: "Next",
-              onTap: () {
-                print("Butona Basıldı");
-              })
+          Row(
+            children: [
+              CustomButton(
+                  title: "Next",
+                  onTap: () {
+                    print("Butona Basıldı");
+                  }),
+            ],
+          )
         ],
       ),
     );
