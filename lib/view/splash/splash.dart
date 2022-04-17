@@ -39,7 +39,7 @@ class Splash extends ConsumerWidget {
           Row(
             children: [
               CustomButton(
-                  title: "Next",
+                  title: "Sonraki",
                   onTap: () {
                     print("Butona Basıldı");
                   }),
