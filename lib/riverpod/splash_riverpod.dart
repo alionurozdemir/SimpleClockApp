@@ -4,7 +4,7 @@ import 'package:flutter/cupertino.dart';
 class SplashRiverpood extends ChangeNotifier {
   List<SplashModel> pages = [
     SplashModel(
-        title: "Welcome To Smart Clock 1",
+        title: "1. Ekran",
         subTitle: "Simple And FastClock App 2",
         imagePath: "assets/images/Standing.png"),
     SplashModel(
