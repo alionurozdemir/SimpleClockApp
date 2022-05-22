@@ -1,12 +1,12 @@
-import 'package:clockapplication/components/custom_button.dart';
-import 'package:clockapplication/riverpod/splash_riverpod.dart';
+import 'package:clockapplication/ui/shared/widgets/custom_button.dart';
+import 'package:clockapplication/core/providers/onboarding_provider.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 final splashRiverpood = ChangeNotifierProvider((ref) => SplashRiverpood());
 
-class Splash extends ConsumerWidget {
-  const Splash({Key? key}) : super(key: key);
+class SliderPage extends ConsumerWidget {
+  const SliderPage({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {

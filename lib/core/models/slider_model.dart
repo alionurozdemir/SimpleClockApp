@@ -1,8 +1,8 @@
-class SplashModel {
+class SliderModel {
   String title;
   String subTitle;
   String imagePath;
-  SplashModel({
+  SliderModel({
     required this.title,
     required this.subTitle,
     required this.imagePath,

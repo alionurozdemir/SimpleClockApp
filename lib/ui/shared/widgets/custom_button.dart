@@ -1,4 +1,4 @@
-import 'package:clockapplication/constant/constanst.dart';
+import 'package:clockapplication/utils/constanst.dart';
 import 'package:flutter/material.dart';
 
 class CustomButton extends StatelessWidget {
@@ -8,11 +8,12 @@ class CustomButton extends StatelessWidget {
   Color? titleColor;
 
   CustomButton({
+    Key? key,
     required this.title,
     this.backgroundColor,
     required this.onTap,
     this.titleColor,
-  });
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -21,7 +22,6 @@ class CustomButton extends StatelessWidget {
         primary: backgroundColor ?? Constant.mainColor,
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(20.0),
-          
         ),
         elevation: 20,
         shadowColor: backgroundColor ?? Constant.mainColor,
